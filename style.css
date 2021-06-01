@@ -1,0 +1,252 @@
+
+body{
+	margin:0;
+	padding:0;
+    background:#FFFFFF;
+    overflow-x:hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.page-container{overflow: hidden;}
+ /* Prevents unwanted scroll space when scroll FX used. */
+
+a,button{transition: background .3s ease-in-out;outline: none!important;} /* Prevent blue selection glow on Chrome and Safari */
+
+a:hover{text-decoration: none; cursor:pointer;}
+
+
+
+/* = Blocs
+-------------------------------------------------------------- */
+
+.bloc{
+	width:100%;
+	clear:both;
+	background: 50% 50% no-repeat;
+	padding:0 20px;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position:relative;
+	display:flex;
+}
+.bloc .container{
+	padding-left:0;
+	padding-right:0;
+}
+
+
+/* Sizes */
+
+.bloc-lg{
+	padding:100px 20px;
+}
+.bloc-md{
+	padding:50px 20px;
+}
+.bloc-sm{
+	padding:20px;
+}
+
+
+/* Dark theme */
+
+.d-bloc{
+	color:rgba(255,255,255,.7);
+}
+.d-bloc .a-btn{
+	color:rgba(255,255,255,.6);
+}
+.d-bloc .a-btn:hover{
+	color:rgba(255,255,255,1);
+}
+
+
+/* Light theme */
+
+.l-bloc{
+	color:rgba(0,0,0,.5);
+}
+.l-bloc button:hover{
+	color:rgba(0,0,0,.7);
+}
+.l-bloc .a-btn,.l-bloc .navbar a{
+	color:rgba(0,0,0,.6);
+}
+.l-bloc .a-btn:hover,.l-bloc .navbar a:hover{
+	color:rgba(0,0,0,1);
+}
+
+/* Row Margin Offsets */
+
+.voffset{
+	margin-top:30px;
+}
+
+
+/* = NavBar
+-------------------------------------------------------------- */
+
+/* Handle Multi Level Navigation */
+/* = Bric adjustment margins
+-------------------------------------------------------------- */
+.mg-sm{
+	margin-top:10px;
+	margin-bottom:5px;
+}
+.margin-medium{
+	margin-top:10px;
+	margin-bottom:20px;
+}
+.mg-lg{
+	margin-top:10px;
+	margin-bottom:40px;
+}
+
+/* = Buttons
+-------------------------------------------------------------- */
+
+.btn-d,.btn-d:hover,.btn-d:focus{
+	color:#FFF;
+	background:rgba(0,0,0,.3);
+}
+
+/* Prevent ugly blue glow on chrome and safari */
+button{
+	outline: none!important;
+}
+
+.btn-xl{
+	padding: 16px 40px;
+	font-size: 28px;
+}
+.a-block{
+	width:100%;
+	text-align:left;
+	display: inline-block;
+}
+
+/* = Icons
+-------------------------------------------------------------- */
+
+.icon-md{ font-size:30px!important; } .icon-round{ margin:0 auto; border:2px solid transparent; border-radius: 50%; padding: 32px 30px 26px 30px; min-width:80px; } .icon-round.icon-md,.icon-square.icon-md,.icon-rounded.icon-md{ min-width: 92px; } .icon-round.icon-lg,.icon-square.icon-lg,.icon-rounded.icon-lg{ min-width: 122px; } .icon-round.icon-xl,.icon-square.icon-xl,.icon-rounded.icon-xl{ min-width: 162px; }
+
+
+/* = Cards
+-------------------------------------------------------------- */
+
+
+
+
+
+/* ScrollToTop button */
+
+.scrollToTop{
+	width:36px;
+	height:36px;
+	padding:5px;
+	position:fixed;
+	bottom:20px;
+	right:20px;
+	opacity:0;
+	z-index:999;
+	transition: all .3s ease-in-out;
+	pointer-events:none;
+}
+.scroll-to-top-btn-icon{
+	fill: none;
+	stroke: #fff;
+	stroke-width: 2px;
+	fill-rule: evenodd;
+	stroke-linecap:round;
+}
+/* = Lightbox
+-------------------------------------------------------------- */
+
+/* Framless */
+
+/* = Custom Styling
+-------------------------------------------------------------- */
+
+h2,h3,h4,h5,p,label,.btn,a{
+	font-family:"Helvetica";
+}
+.container{
+	max-width:1140px;
+}
+.navbar-brand img{
+	width:203px;
+	height:80px;
+}
+.h4-style{
+	font-size:28px;
+	width:100%;
+}
+.btn-banniere{
+	font-weight:bold;
+}
+
+/* = Colour
+-------------------------------------------------------------- */
+
+/* Background colour styles */
+.bgc-black{
+	background-color:#000000;
+}
+
+/* Text colour styles */
+
+.tc-black{
+	color:#000000!important;
+}
+
+/* Button colour styles */
+.btn-lavender-blue{
+	background:#C8DFFF;
+	color:rgba(0,0,0,.5)!important;
+}
+.btn-lavender-blue:hover{
+	background:#a0b2cc!important;
+	color:rgba(0,0,0,.5)!important;
+}
+
+/* Bloc image backgrounds */
+
+.bg-contact{
+	background-image:url("img/banniere_evene_accueil-v5.jpg");
+}
+.banniere-home{
+	background-image:url("img/rester_zen-banniere_article_header.jpg");
+}
+
+
+
+/* = Bloc Padding Multi Breakpoint
+-------------------------------------------------------------- */
+
+
+/* = Mobile adjustments 
+-------------------------------------------------------------- */
+@media (max-width: 991px)
+{
+    .container{width:100%;}
+    .bloc{padding-left: constant(safe-area-inset-left);padding-right: constant(safe-area-inset-right);} /* iPhone X Notch Support*/
+}
+@media (max-width: 767px)
+{
+    .voffset{
+        margin-top:5px;
+    }
+    form{
+        padding:5px;
+    }
+}
+
+@media (max-width: 575px){
+	.footer-link{
+		text-align:center;
+	}
+	
+}
+
