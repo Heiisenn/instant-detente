@@ -8,12 +8,54 @@
 	<link rel="canonical" href="instantdétente.fr/index.html" />
 	<meta name="robots" content="index, follow" />
     <link rel="shortcut icon" type="image/png" href="favicon.png">
-    
+	
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="./style.css">
 	<link rel="stylesheet" type="text/css" href="./css/all.min.css">
 	
+	
     <title>Accueil</title>
+
+	<style>
+
+	.banner{
+		position: relative;
+		height: 40rem; 
+		overflow: hidden;
+		display : flex;
+		justify-content: center;
+		align-items: center;
+	  }
+	  .banner-desc{
+	  /*  position: absolute;*/
+		z-index: 0;
+		text-align: center;
+	  }
+	  
+	  .banner-desc h1{
+		font-size: 8rem;
+		line-height: 1;
+		color:white;
+		margin-bottom: 1rem;
+	  }
+	  .banner-video{
+		position: absolute; 
+		z-index: -2;
+		transform: translate(-50%, -10%) scale(1.5);
+		left: 50%; 
+		top:0;
+	  }
+	  .banner-video-overlay{
+		position: absolute; 
+		height: 100%; 
+		width: 100%;
+		top:0;
+		left:0;
+		background: rgba(0,0,0,0.3);
+		z-index: -1;
+	  }
+	  
+	  </style>
 
 	<script> alert("Attention : L'évènement décrit dans le site est fictif, et uniquement lié à un projet universitaire")</script>
 
@@ -67,19 +109,27 @@
   </nav>
 <!-- Navbar fin -->
 
-<!-- Bannière -->
-<div class="bloc banniere-home" id="Bannière">
-	<div class="container bloc-lg"> <!-- Container centré-->
-		<div class="row">
-			<div class="col-lg-4 offset-lg-4 col-sm-6 offset-sm-3 col"> <!-- Titre et bouton -->
-				<h2 class="margin-medium text-center tc-black">
-					<strong>Du 9 au 11 juillet 2021</strong>
-				</h2><a href="tarifs.html" class="btn btn-xl btn-d btn-banniere btn-block">Je viens !<br></a>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- Bannière fin -->
+<section class="banner">
+    <div class="banner-desc"> <!-- Titre et bouton -->
+			<h2 style="color: #fff" class="margin-medium text-center">
+				<strong>Du 9 au 11 juillet 2021</strong>
+			</h2><a href="tarifs.html" class="btn btn-xl btn-d btn-banniere btn-block">JE VIENS !<br></a>
+
+    </div>
+
+    <div class="banner-video">
+        <!-- en HTML5 il est possible de lire de la video, certains attributs permettent de la controler plus efficacement -->
+        <!-- l'atribut playsinline est tout recent, et permet à IOS de lire la video en fond sans lancer le player video plein écran -->
+        <video muted loop autoplay playsinline>
+                                  
+                      <source src="video/vidéo fond site.mp4">
+        </video>
+    </div>
+
+    <!-- fond semi opaque noir au dessus de la video -->
+    <div class="banner-video-overlay"></div>
+
+</section>
 
 
 <div class="bloc">
@@ -146,6 +196,7 @@
 				<img src="img/logo_malea.jpg" class="img-fluid mx-auto " alt="logo_malea" />
 			</div>
 		</div>
+		<div style="text-align: center; padding-top: 30px;"><a class="btn" style="background-color: #C8DFFF;" href="stands.html">Découvrir la liste des exposants !</a></div>
 	</div>
 </div>
 

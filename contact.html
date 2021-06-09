@@ -8,7 +8,7 @@
 	<link rel="canonical" href="instantdétente.fr/index.html" />
 	<meta name="robots" content="index, follow" />
     <link rel="shortcut icon" type="image/png" href="favicon.png">
-    
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="./css/all.min.css">
@@ -34,7 +34,7 @@
 	<span></span>
   
 	<!-- logo -->
-	<a href="#" class="menu-logo">
+	<a href="index.html" class="menu-logo">
 	  <img src="./logosite.png" alt="LogoSite"/>
 	</a>
   
@@ -86,24 +86,29 @@
 	<div class="container bloc-lg">
 		<div class="row">
 			<div class="col-lg-6 offset-lg-3 offset-md-2 col-md-8">
-				<form id="form_43738" data-form-type="blocs-form" novalidate>
+				<form id="form_43738" action="/form.php" data-form-type="blocs-form" method="POST" novalidate>
 					<div class="form-group">
 						<label>
 							Nom<br>
 						</label>
-						<input id="name_43738" class="form-control" required />
+						<input id="name_43738" name="nom" class="form-control" required />
 					</div>
 					<div class="form-group">
 						<label>
 							Adresse mail
 						</label>
-						<input id="email_43738" class="form-control" type="email" required />
+						<input id="email_43738" name="adresse-mail" class="form-control" type="email" required />
 					</div>
 					<div class="form-group">
 						<label>
 							Votre message
-						</label><textarea id="message_43738" class="form-control" rows="4" cols="50" required></textarea>
-					</div> 
+						</label><textarea name="message" id="message_43738" class="form-control" rows="4" cols="50" required></textarea>
+					</div>
+
+					<div class="text-center">
+					<div class="g-recaptcha" data-sitekey="6LfpXhAbAAAAABZ4DAbEJ9DJNvpGdA2hVCp7fMax"></div>
+					</div>
+
 					<button class="bloc-button btn btn-lg btn-block btn-lavender-blue" type="submit">
 						Envoyer
 					</button>
