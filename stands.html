@@ -72,7 +72,7 @@
 
     <!-- Modal content -->
     <div class="modal-content">
-      
+      <span id="close1" class="close">&times;</span>
       <h4 style="text-align: center;">Institut de beauté</h4><br><ul>
         <li>1.	Spa center Lille</li>
         <li>2.	L’institut Ô naturel</li>
@@ -98,7 +98,7 @@
 
     <!-- Modal content -->
     <div class="modal-content">
-      
+      <span id="close2" class="close">&times;</span>
       <h4 style="text-align: center;">Boutique nourriture bio</h4><br><ul>
         <li>15.	Bio c’Bon</li>
         <li>16.	Naturéo Orchies</li>
@@ -132,7 +132,7 @@
 
     <!-- Modal content -->
     <div class="modal-content">
-      
+      <span id="close3" class="close">&times;</span>
       <h4 style="text-align: center;">Boutiques objets/produits</h4><br><ul>
         <li>37.	Aroma-zone Lille</li>
         <li>38.	Biio Nature</li>
@@ -172,7 +172,7 @@
 
     <!-- Modal content -->
     <div class="modal-content">
-      
+      <span id="close4" class="close">&times;</span>
       <h4 style="text-align: center;">Sport / Boutique indépendante / Associations</h4><br><ul>
         <li>65.	Basic Fit</li>
         <li>66.	Yoga Germaine</li>
@@ -192,34 +192,34 @@
 		<div class="row">
 			<div class="col-md-6 col-lg-3">
 				<div class="text-center">
-					<span class="icon-round icon-md fa fa-star"></span> <!-- Récupérations logos-->
+					<span class="icon-round icon-md fa fa-leaf"></span> <!-- Récupérations logos-->
 				</div>
 				<h4 id="myBtn1" class="mg-md text-center stands">
-					Instituts de beauté <br>(17)
+					Instituts de beauté
 				</h4>
 			</div>
 			<div class="col-md-6 col-lg-3">
 				<div class="text-center">
-					<span class="icon-round icon-md fa fa-apple-alt"></span>
+					<span class="icon-round icon-md fa fa-carrot"></span>
 				</div>
 				<h4 id="myBtn2"class="mg-md text-center stands">
-					Boutique nourriture bio <br>(23)
+					Boutique nourriture bio
 				</h4>
 			</div>
 			<div class="col-md-6 col-lg-3">
 				<div class="text-center">
-					<span class="icon-round icon-md fa fa-tools"></span>
+					<span class="icon-round icon-md fa fa-shopping-bag"></span>
 				</div>
 				<h4 id="myBtn3" class="mg-md text-center stands">
-					Boutiques objets / produits <br>(25)
+					Boutiques objets / produits
 				</h4>
 			</div>
 			<div class="col-md-6 col-lg-3">
 				<div class="text-center">
-					<span class="icon-round icon-md fa fa-smile"></span>
+					<span class="icon-round icon-md fa fa-running"></span>
 				</div>
 				<h4 id="myBtn4" class="mg-md text-center stands">
-					Sport / Boutique indépendante / Associations <br>(15)
+					Sport / Boutique indépendante / Associations
 				</h4>
 			</div>
 		</div>
@@ -237,7 +237,7 @@
 			<div class="col-12 col-sm-4">
 				<h4 class="margin-medium text-sm-left text-center">
 					À propos de nous
-				</h4><a href="contact.html" class="a-btn a-block footer-link">Nous contacter</a>
+				</h4><a href="contact.html" class="a-btn a-block footer-link">Nous contacter</a><a href="./en/index.html" class="a-btn a-block footer-link">English version</a>
 			</div>
 			<div class="col-12 col-sm-4">
 				<h4 class="margin-medium text-sm-left text-center">
@@ -274,7 +274,10 @@
     var btn4 = document.getElementById("myBtn4");
     
     // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+    var span1 = document.getElementById("close1");
+    var span2 = document.getElementById("close2");
+    var span3 = document.getElementById("close3");
+    var span4 = document.getElementById("close4");
     
     // When the user clicks on the button, open the modal
     btn1.onclick = function() {
@@ -305,6 +308,32 @@
 
     }
 
+
+// When the user clicks on <span> (x), close the modal
+  span1.onclick = function() {
+  modal1.style.display = "none";
+  modal2.style.display = "none";
+  modal3.style.display = "none";
+  modal4.style.display = "none";
+}
+span2.onclick = function() {
+  modal1.style.display = "none";
+  modal2.style.display = "none";
+  modal3.style.display = "none";
+  modal4.style.display = "none";
+}
+span3.onclick = function() {
+  modal1.style.display = "none";
+  modal2.style.display = "none";
+  modal3.style.display = "none";
+  modal4.style.display = "none";
+}
+span4.onclick = function() {
+  modal1.style.display = "none";
+  modal2.style.display = "none";
+  modal3.style.display = "none";
+  modal4.style.display = "none";
+}
     
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {

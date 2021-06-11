@@ -7,16 +7,14 @@ body{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.page-container{overflow: hidden;}
- /* Prevents unwanted scroll space when scroll FX used. */
 
 a,button{transition: background .3s ease-in-out;outline: none!important;} /* Prevent blue selection glow on Chrome and Safari */
 
-a:hover{text-decoration: none; cursor:pointer;}
+a:hover{text-decoration: none; cursor:pointer;} /* Force l'utilisation du pointer sur des liens
 
 
 
-/* = Blocs
+/* = Bloc (container)
 -------------------------------------------------------------- */
 
 .bloc{
@@ -50,7 +48,7 @@ a:hover{text-decoration: none; cursor:pointer;}
 }
 
 
-/* Dark theme */
+/* Background black */
 
 .d-bloc{
 	color:rgba(255,255,255,.7);
@@ -62,8 +60,7 @@ a:hover{text-decoration: none; cursor:pointer;}
 	color:rgba(255,255,255,1);
 }
 
-
-/* Light theme */
+/* Background light */
 
 .l-bloc{
 	color:rgba(0,0,0,.5);
@@ -75,8 +72,10 @@ a:hover{text-decoration: none; cursor:pointer;}
 	color:rgba(0,0,0,.6);
 }
 .l-bloc .a-btn:hover,.l-bloc .navbar a:hover{
-	color:rgba(0,0,0,1);
-}
+	color:rgba(0,0,0,1);}
+
+
+
 
 /* Row Margin Offsets */
 
@@ -265,10 +264,7 @@ body {
 }
 
 
-/* Handle Multi Level Navigation */
-
-
-/* = Bric adjustment margins
+/* = Margin sizes
 -------------------------------------------------------------- */
 .mg-sm{
 	margin-top:10px;
@@ -291,7 +287,10 @@ body {
 	background:rgba(0,0,0,.5);
 }
 
-/* Prevent ugly blue glow on chrome and safari */
+.btn-lavender-blue{
+  background-color: #C8DFFF;
+}
+/* Prevent ugly blue glow on chrome and safari */ 
 button{
 	outline: none!important;
 }
@@ -306,7 +305,7 @@ button{
 	display: inline-block;
 }
 
-/* = Icons
+/* = Icons from FA
 -------------------------------------------------------------- */
 
 .icon-md{ font-size:30px!important; } .icon-round{ margin:0 auto; border:2px solid transparent; border-radius: 50%; padding: 32px 30px 26px 30px; min-width:80px; } .icon-round.icon-md,.icon-square.icon-md,.icon-rounded.icon-md{ min-width: 92px; } .icon-round.icon-lg,.icon-square.icon-lg,.icon-rounded.icon-lg{ min-width: 122px; } .icon-round.icon-xl,.icon-square.icon-xl,.icon-rounded.icon-xl{ min-width: 162px; }
@@ -316,34 +315,14 @@ button{
 -------------------------------------------------------------- */
 
 
-
-
-
-/* ScrollToTop button */
-
-.scrollToTop{
-	width:36px;
-	height:36px;
-	padding:5px;
-	position:fixed;
-	bottom:20px;
-	right:20px;
-	opacity:0;
-	z-index:999;
-	transition: all .3s ease-in-out;
-	pointer-events:none;
+.card-footer{
+  background-color: #C8DFFF;
 }
-.scroll-to-top-btn-icon{
-	fill: none;
-	stroke: #fff;
-	stroke-width: 2px;
-	fill-rule: evenodd;
-	stroke-linecap:round;
-}
-/* = Lightbox
--------------------------------------------------------------- */
 
-/* Framless */
+.btn-commander-style:hover{
+  text-decoration: underline;
+}
+
 
 /* = Custom Styling
 -------------------------------------------------------------- */
@@ -380,32 +359,15 @@ h2,h3,h4,h5,p,label,.btn,a{
 	color:#000000!important;
 }
 
-/* Button colour styles */
-.btn-lavender-blue{
-	background:#C8DFFF;
-	color:rgba(0,0,0,.5)!important;
-}
-.btn-lavender-blue:hover{
-	background:#a0b2cc!important;
-	color:rgba(0,0,0,.5)!important;
-}
 
-/* Bloc image backgrounds */
+/* image backgrounds */
 
 .bg-contact{
 	background-image:url("img/banniere_evene_accueil-v5.jpg");
 }
-.banniere-home{
-	background-image:url("img/rester_zen-banniere_article_header.jpg");
-}
 
 
-
-/* = Bloc Padding Multi Breakpoint
--------------------------------------------------------------- */
-
-
-/* = Mobile adjustments 
+/* = setting in responsive
 -------------------------------------------------------------- */
 @media (max-width: 991px)
 {
@@ -505,7 +467,7 @@ h2,h3,h4,h5,p,label,.btn,a{
   width: 80%; /* Could be more or less, depending on screen size */
 }
 
-/* The Close Button */
+/* Close Button */
 .close {
   color: #aaa;
   float: right;
@@ -523,4 +485,30 @@ h2,h3,h4,h5,p,label,.btn,a{
 .overflow {
   height: 100vh;
   overflow-y: hidden;
+}
+
+.map-responsive{
+
+  overflow:hidden;
+
+  padding-bottom:56.25%;
+
+  position:relative;
+
+  height:0;
+
+}
+
+.map-responsive iframe{
+
+  left:0;
+
+  top:0;
+
+  height:100%;
+
+  width:100%;
+
+  position:absolute;
+
 }
